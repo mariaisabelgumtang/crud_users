@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - ./backend/data:/var/www/html/data
+      - ./backend/src:/var/www/html/src
+      - ./backend/public:/var/www/html/public
+      - ./backend/database.sql:/var/www/html/database.sql
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8001:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

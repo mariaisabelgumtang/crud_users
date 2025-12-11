@@ -1,0 +1,18 @@
+:root{--bg:#f7f8fb;--card:#fff;--accent:#0366d6;--muted:#666}
+*{box-sizing:border-box;font-family:Segoe UI,Roboto,Arial,sans-serif}
+body{background:var(--bg);margin:0;padding:24px}
+main{max-width:900px;margin:0 auto}
+h1{margin:0 0 16px}
+section{background:var(--card);padding:16px;border-radius:8px;margin-bottom:16px;box-shadow:0 1px 4px rgba(15,15,15,0.06)}
+.row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.row label{width:120px;color:var(--muted)}
+input[type=text],input[type=email],input[type=date]{flex:1;padding:8px;border:1px solid #ddd;border-radius:4px}
+button{background:var(--accent);color:#fff;padding:8px 12px;border:none;border-radius:6px;cursor:pointer}
+button[disabled]{opacity:.6;cursor:not-allowed}
+ul#users{list-style:none;padding:0;margin:0}
+ul#users li{padding:8px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+.muted{color:var(--muted)}
+.hidden{display:none}
+.error{color:#b00020;margin-top:8px}
+.controls{margin-bottom:8px}
+.addr{padding:8px;border:1px dashed #e6e6e6;border-radius:6px;margin-bottom:8px}

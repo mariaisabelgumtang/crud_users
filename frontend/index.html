@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Users CRUD Frontend</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Users CRUD</h1>
+
+    <section id="create">
+      <h2>Create User</h2>
+      <form id="userForm">
+        <div class="row"><label>Email</label><input name="email" type="email" required></div>
+        <div class="row"><label>First name</label><input name="first_name" required></div>
+        <div class="row"><label>Last name</label><input name="last_name" required></div>
+        <div class="row"><label>Mobile</label><input name="mobile_number" required></div>
+        <div class="row"><label>Birth date</label><input name="birth_date" type="date" required></div>
+
+        <div id="addresses">
+          <h3>Addresses</h3>
+          <div class="addr" data-index="0">
+            <div class="row"><label>Street</label><input name="street"></div>
+            <div class="row"><label>Barangay</label><input name="barangay" required></div>
+            <div class="row"><label>City</label><input name="city" required></div>
+          </div>
+        </div>
+        <button type="button" id="addAddress">Add Address</button>
+        <div class="row"><button type="submit">Create</button></div>
+      </form>
+      <div id="formError" class="error"></div>
+    </section>
+
+    <section id="list">
+      <h2>Users</h2>
+      <div class="controls"><button id="refresh">Refresh</button></div>
+      <ul id="users"></ul>
+    </section>
+
+    <section id="detail" class="hidden">
+      <h2>User Detail</h2>
+      <div id="detailContent"></div>
+      <div class="row"><button id="closeDetail">Close</button></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
